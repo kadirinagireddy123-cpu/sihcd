@@ -1,0 +1,276 @@
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: 200%;
+  animation: marquee 25s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Glassmorphism utility */
+.glass-panel {
+  background: rgba(17, 24, 39, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+}
+
+.glass-panel-interactive {
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-panel-interactive:hover {
+  background: rgba(30, 41, 59, 0.85);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+}
+
+/* Custom leaflet container fix */
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: #0d131f !important;
+}
+
+.leaflet-popup-content-wrapper {
+  background: rgba(15, 23, 42, 0.95) !important;
+  color: #fff !important;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px !important;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.6) !important;
+}
+
+.leaflet-popup-tip {
+  background: rgba(15, 23, 42, 0.95) !important;
+}
+
+/* Pulse keyframes */
+@keyframes pulse-red {
+  0% { box-shadow: 0 0 0 0 rgba(255, 59, 92, 0.7); }
+  70% { box-shadow: 0 0 0 14px rgba(255, 59, 92, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(255, 59, 92, 0); }
+}
+
+@keyframes pulse-green {
+  0% { box-shadow: 0 0 0 0 rgba(6, 214, 160, 0.7); }
+  70% { box-shadow: 0 0 0 12px rgba(6, 214, 160, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(6, 214, 160, 0); }
+}
+
+.pulse-critical {
+  animation: pulse-red 1.8s infinite;
+}
+
+.pulse-safe {
+  animation: pulse-green 2.2s infinite;
+}
+
+/* Badge styling */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.badge-critical {
+  background: rgba(255, 59, 92, 0.15);
+  color: #ff3b5c;
+  border: 1px solid rgba(255, 59, 92, 0.3);
+}
+
+.badge-warning {
+  background: rgba(255, 159, 28, 0.15);
+  color: #ff9f1c;
+  border: 1px solid rgba(255, 159, 28, 0.3);
+}
+
+.badge-safe {
+  background: rgba(6, 214, 160, 0.15);
+  color: #06d6a0;
+  border: 1px solid rgba(6, 214, 160, 0.3);
+}
+
+.badge-cyan {
+  background: rgba(0, 245, 212, 0.15);
+  color: #00f5d4;
+  border: 1px solid rgba(0, 245, 212, 0.3);
+}
+
+.badge-purple {
+  background: rgba(168, 85, 247, 0.15);
+  color: #c084fc;
+  border: 1px solid rgba(168, 85, 247, 0.3);
+}
+
+/* Button styles */
+.btn-primary {
+  background: linear-gradient(135deg, #00f5d4 0%, #00b4d8 100%);
+  color: #051923;
+  font-weight: 700;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 15px rgba(0, 245, 212, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(0, 245, 212, 0.5);
+  filter: brightness(1.1);
+}
+
+.btn-danger {
+  background: linear-gradient(135deg, #ff3b5c 0%, #d90429 100%);
+  color: #fff;
+  font-weight: 700;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 15px rgba(255, 59, 92, 0.3);
+}
+
+.btn-danger:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(255, 59, 92, 0.5);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.06);
+  color: #f3f4f6;
+  font-weight: 600;
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+/* Cyan & Mint World Map Style (Matching User Reference Image) */
+.cyan-mint-container {
+  background-color: #3ec1d3 !important;
+}
+
+.cyan-mint-tiles {
+  filter: hue-rotate(42deg) saturate(1.45) brightness(1.02) contrast(1.06);
+}
+
+.cyan-mint-vector-tiles {
+  filter: brightness(0.98) contrast(1.05);
+}
+
+/* Map label marker styling */
+.world-ocean-label {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  color: #1e3a8a !important;
+  font-weight: 700 !important;
+  font-size: 13px !important;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+  pointer-events: none;
+}
+
+.world-country-label {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  color: #0f172a !important;
+  font-weight: 600 !important;
+  font-size: 11px !important;
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.9), 0 0 1px rgba(255, 255, 255, 1);
+  pointer-events: none;
+}
+
+/* Button glow */
+.btn-cyan-mint {
+  background: linear-gradient(135deg, #3ec1d3 0%, #06d6a0 100%);
+  color: #051923;
+  font-weight: 700;
+}
+
+/* ───── Micro-animation utilities ───── */
+
+/* Data value flicker (telemetry numbers updating) */
+@keyframes data-flicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.animate-data-flicker {
+  animation: data-flicker 1.5s ease-in-out infinite;
+}
+
+/* Live status glow for critical panels */
+@keyframes panel-glow-red {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255, 59, 92, 0); }
+  50% { box-shadow: 0 0 18px 4px rgba(255, 59, 92, 0.25); }
+}
+
+.panel-glow-critical {
+  animation: panel-glow-red 2s ease-in-out infinite;
+}
+
+/* Scanline sweep for drone feed */
+@keyframes scan-sweep {
+  0% { top: 0%; }
+  100% { top: 100%; }
+}
+
+.drone-scanline {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  pointer-events: none;
+  z-index: 10;
+  background: linear-gradient(90deg, transparent, rgba(0, 245, 212, 0.5), transparent);
+  box-shadow: 0 0 8px rgba(0, 245, 212, 0.3);
+  animation: scan-sweep 3s linear infinite;
+}
+
+/* Smooth number transition */
+.telemetry-value {
+  transition: all 0.4s ease-out;
+  display: inline-block;
+}
+
+/* HUD corner bracket flicker */
+@keyframes hud-flicker {
+  0%, 90%, 100% { opacity: 0.6; }
+  95% { opacity: 1; }
+}
+
+.hud-bracket {
+  animation: hud-flicker 4s ease-in-out infinite;
+}
